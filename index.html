@@ -1,136 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Piyush Shah and Company | Chartered Accountants | Tax, Audit, GST, Compliance</title>
-<meta name="description" content="Piyush Shah and Company – Chartered Accountants with 25+ years of experience offering taxation, GST, audit, corporate compliance & business advisory services.">
-<meta name="keywords" content="Chartered Accountant, CA firm India, Tax services, GST compliance, Audit services, Business advisory">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================================================
+   GLOBAL RESET & BASE SETTINGS
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+html {
+  scroll-behavior: smooth;
+}
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Piyush Shah and Company | Chartered Accountants">
-<meta property="og:description" content="25+ years of professional CA services in taxation, GST, audit, and compliance.">
-<meta property="og:image" content="https://your-domain.com/assets/logo.png">
-<meta property="og:url" content="https://piyushshahandcompany.github.io">
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f9;
+  color: #1f2933;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
 
-<!-- JSON-LD BUSINESS SCHEMA -->
-<script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"AccountingService",
-  "name":"Piyush Shah and Company",
-  "url":"https://piyushshahandcompany.github.io",
-  "telephone":"+91 9892370925",
-  "email":"piyush.shah2011@yahoo.in",
-  "address": {
-    "@type":"PostalAddress",
-    "addressLocality":"Mumbai",
-    "addressCountry":"IN"
-  },
-  "description":"Professional Chartered Accountant services including taxation, audit, GST compliance, corporate advisory.",
-  "founder":"CA Piyush Shah"
-}</script>
+/* =========================================================
+   TYPOGRAPHY SYSTEM (CONSULTING STYLE)
+========================================================= */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #0b1c2d;
+}
 
-</head>
-<body>
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+}
 
-<header>
-  <div class="container nav-container">
-    <div class="logo"><img src="/assets/logo.png" alt="Piyush Shah and Company"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="founder.html">Founder</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-<section class="hero">
-  <div class="container">
-    <h1>Empowering Businesses with Trusted Financial Expertise</h1>
-    <p>
-      With over 25 years of professional excellence, Piyush Shah and Company
-      helps businesses, professionals, and high-net-worth individuals
-      navigate taxation, audit, GST, and regulatory compliance
-      with precision, integrity, and clarity.
-    </p>
-    <a href="contact.html" class="btn">Request a Consultation</a>
-  </div>
-</section>
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
 
-<section>
-  <div class="container">
-    <h2>About Our Firm</h2>
-    <div class="section-divider"></div>
-    <p>Piyush Shah and Company has been delivering professional Chartered Accountant services since 1996. Our deep technical expertise combined with practical business understanding helps clients make confident, compliant, and profitable decisions.</p>
-    <p>We view every client relationship as a partnership — your success is our success. We consistently deliver high-quality advice across taxation, audit & assurance, GST & indirect taxes, corporate compliance, and strategic business advisory. :contentReference[oaicite:1]{index=1}</p>
-  </div>
-</section>
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
 
-<section>
-  <div class="container">
-    <h2>Our Core Services</h2>
-    <div class="section-divider"></div>
-    <div class="services-grid">
+p {
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+  color: #2f3a45;
+}
 
-      <!-- Income Tax -->
-      <div class="service-box">
-        <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18" stroke-width="2" fill="none"></path></svg>
-        <h3>Income Tax Advisory & Compliance</h3>
-        <p>Comprehensive tax planning, returns, notices, and representation that maximizes legal efficiency and protects your financial interests.</p>
-      </div>
+strong {
+  color: #0b1c2d;
+}
 
-      <!-- GST -->
-      <div class="service-box">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-width="2" fill="none"></circle></svg>
-        <h3>GST & Indirect Taxes</h3>
-        <p>End-to-end GST solutions including registration, filing, audits, notices, and advisory tailored for your business structure. :contentReference[oaicite:2]{index=2}</p>
-      </div>
+/* =========================================================
+   LAYOUT & CONTAINERS
+========================================================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-      <!-- Audit & Assurance -->
-      <div class="service-box">
-        <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" stroke-width="2" fill="none"></path></svg>
-        <h3>Audit & Assurance</h3>
-        <p>Statutory, internal and compliance audits designed to give confidence in financial reporting and regulatory adherence. :contentReference[oaicite:3]{index=3}</p>
-      </div>
+section {
+  padding: 110px 0;
+  background: #ffffff;
+}
 
-      <!-- Advisory -->
-      <div class="service-box">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" fill="none"></path></svg>
-        <h3>Business Advisory & Finance</h3>
-        <p>Strategic business advisory including investment planning, compliance systems, and growth-stage decision support. :contentReference[oaicite:4]{index=4}</p>
-      </div>
+.section-alt {
+  background: #f9fafc;
+}
 
-    </div>
-  </div>
-</section>
+.section-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #c9a24d, #e6c879);
+  margin: 28px 0 50px;
+}
 
-<section>
-  <div class="container">
-    <h2>Why Choose Us</h2>
-    <div class="section-divider"></div>
-    <ul class="why-list">
-      <li>25+ Years of Proven Professional Experience</li>
-      <li>Comprehensive Financial & Tax Solutions</li>
-      <li>Transparent Process & Client-Centric Approach</li>
-      <li>Trusted by Corporates, SMEs & Professionals</li>
-    </ul>
-  </div>
-</section>
+/* =========================================================
+   HEADER & NAVIGATION (ENTERPRISE)
+========================================================= */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-<footer>
-  <div class="container">
-    <p>© 2026 Piyush Shah and Company | Chartered Accountants | Mumbai</p>
-    <p><a href="contact.html">Contact Us</a></p>
-  </div>
-</footer>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
 
-</body>
-</html>
+.logo img {
+  height: 48px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0b1c2d;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #c9a24d;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO SECTION (PREMIUM FIXED)
+========================================================= */
+.hero {
+  background: linear-gradient(
+      rgba(11, 28, 45, 0.78),
+      rgba(11, 28, 45, 0.78)
+    ),
+    url("assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 180px 0;
+}
+
+.hero h1 {
+  color: #ffffff;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero p {
+  color: #e3e9ef;
+  max-width: 860px;
+  margin: 25px auto;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #c9a24d, #e6c879);
+  color: #0b1c2d;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   GRID & CARD SYSTEM
+========================================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 46px;
+  border-top: 5px solid #c9a24d;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================================================
+   LONG CONTENT PAGES
+========================================================= */
+.content {
+  max-width: 950px;
+}
+
+.content ul {
+  margin: 20px 0 20px 22px;
+}
+
+.content li {
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  background: #0b1c2d;
+  padding: 70px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #cfd6dc;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  section { padding: 80px 0; }
+  nav ul { flex-direction: column; gap: 16px; }
+}
