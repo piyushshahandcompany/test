@@ -1,228 +1,107 @@
-/* =========================================================
-   GLOBAL RESET & BASE SETTINGS
-========================================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Piyush Shah and Company | Chartered Accountants</title>
+<meta name="description" content="Piyush Shah and Company is a reputed Chartered Accountant firm with over 25 years of experience in taxation, audit, compliance, and advisory services across India.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html {
-  scroll-behavior: smooth;
-}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f4f6f9;
-  color: #1f2933;
-  line-height: 1.9;
-  -webkit-font-smoothing: antialiased;
-}
+<body>
 
-/* =========================================================
-   TYPOGRAPHY SYSTEM (CONSULTING STYLE)
-========================================================= */
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  color: #0b1c2d;
-}
+<header>
+  <div class="container navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Piyush Shah and Company">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="founder.html">Founder</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-h1 {
-  font-size: 3.2rem;
-  margin-bottom: 24px;
-}
+<section class="hero">
+  <div class="container">
+    <h1>Empowering Businesses with Trusted Financial Expertise</h1>
+    <p>
+      Established in 1996, Piyush Shah and Company is a professionally managed
+      Chartered Accountant firm delivering reliable, ethical, and strategic
+      accounting, taxation, audit, and compliance services.
+    </p>
+    <a href="contact.html" class="btn">Request a Consultation</a>
+  </div>
+</section>
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+<section>
+  <div class="container content">
+    <h2>About Our Firm</h2>
+    <div class="section-divider"></div>
 
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
-}
+    <p>
+      Piyush Shah and Company has built a legacy of trust and professionalism
+      over more than two decades of continuous practice. Our firm has advised
+      a diverse portfolio of clients including entrepreneurs, SMEs, professionals,
+      family-owned businesses, and corporate entities.
+    </p>
 
-h4 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
+    <p>
+      We believe that accounting is not merely about numbers, but about discipline,
+      documentation, governance, and decision-making. Our approach is rooted in
+      technical excellence, ethical standards, and long-term client partnerships.
+    </p>
 
-p {
-  font-size: 1.08rem;
-  margin-bottom: 18px;
-  color: #2f3a45;
-}
+    <p>
+      By combining regulatory knowledge with practical business insight, we help
+      clients remain compliant, reduce risk, and make informed financial decisions.
+    </p>
+  </div>
+</section>
 
-strong {
-  color: #0b1c2d;
-}
+<section class="section-alt">
+  <div class="container">
+    <h2>Why Clients Trust Us</h2>
+    <div class="section-divider"></div>
 
-/* =========================================================
-   LAYOUT & CONTAINERS
-========================================================= */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    <div class="grid">
+      <div class="card">
+        <h3>25+ Years of Experience</h3>
+        <p>
+          Decades of hands-on professional practice across taxation, audit,
+          accounting, and regulatory compliance.
+        </p>
+      </div>
 
-section {
-  padding: 110px 0;
-  background: #ffffff;
-}
+      <div class="card">
+        <h3>PAN India Presence</h3>
+        <p>
+          Serving clients across India through secure remote systems
+          and on-site professional engagement.
+        </p>
+      </div>
 
-.section-alt {
-  background: #f9fafc;
-}
+      <div class="card">
+        <h3>Compliance-First Philosophy</h3>
+        <p>
+          Strong emphasis on statutory discipline, governance,
+          documentation, and risk mitigation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-.section-divider {
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #c9a24d, #e6c879);
-  margin: 28px 0 50px;
-}
+<footer>
+  <p>© 2026 Piyush Shah and Company | Chartered Accountants</p>
+</footer>
 
-/* =========================================================
-   HEADER & NAVIGATION (ENTERPRISE)
-========================================================= */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 0;
-}
-
-.logo img {
-  height: 48px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 34px;
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #0b1c2d;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #c9a24d;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* =========================================================
-   HERO SECTION (PREMIUM FIXED)
-========================================================= */
-.hero {
-  background: linear-gradient(
-      rgba(11, 28, 45, 0.78),
-      rgba(11, 28, 45, 0.78)
-    ),
-    url("assets/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 180px 0;
-}
-
-.hero h1 {
-  color: #ffffff;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero p {
-  color: #e3e9ef;
-  max-width: 860px;
-  margin: 25px auto;
-  font-size: 1.2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 16px 48px;
-  background: linear-gradient(135deg, #c9a24d, #e6c879);
-  color: #0b1c2d;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 30px;
-}
-
-/* =========================================================
-   GRID & CARD SYSTEM
-========================================================= */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.card {
-  background: #ffffff;
-  padding: 46px;
-  border-top: 5px solid #c9a24d;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.07);
-}
-
-/* =========================================================
-   LONG CONTENT PAGES
-========================================================= */
-.content {
-  max-width: 950px;
-}
-
-.content ul {
-  margin: 20px 0 20px 22px;
-}
-
-.content li {
-  margin-bottom: 12px;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-footer {
-  background: #0b1c2d;
-  padding: 70px 0;
-  text-align: center;
-}
-
-footer p {
-  color: #cfd6dc;
-  font-size: 0.9rem;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-@media (max-width: 768px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  section { padding: 80px 0; }
-  nav ul { flex-direction: column; gap: 16px; }
-}
+</body>
+</html>
