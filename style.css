@@ -1,0 +1,172 @@
+/* -----------------------
+   GLOBAL RESET
+------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: #f5f7fa;
+  line-height: 1.7;
+}
+
+/* -----------------------
+   TYPOGRAPHY
+------------------------ */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #0b1c2d;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.05rem;
+}
+
+/* -----------------------
+   LAYOUT
+------------------------ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* -----------------------
+   HEADER & NAVIGATION
+------------------------ */
+header {
+  background: #0b1c2d;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #c9a24d;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #c9a24d;
+}
+
+/* -----------------------
+   HERO SECTION
+------------------------ */
+.hero {
+  background: linear-gradient(
+      rgba(11, 28, 45, 0.85),
+      rgba(11, 28, 45, 0.85)
+    ),
+    url('');
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.hero h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.15rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: #c9a24d;
+  color: #0b1c2d;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* -----------------------
+   SERVICES GRID
+------------------------ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 35px;
+  border-left: 4px solid #c9a24d;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-box h3 {
+  margin-bottom: 10px;
+}
+
+/* -----------------------
+   FOOTER
+------------------------ */
+footer {
+  background: #0b1c2d;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #cfd6dc;
+}
+
+/* -----------------------
+   RESPONSIVE
+------------------------ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
