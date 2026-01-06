@@ -1,55 +1,32 @@
-/* ==================================================
-   GLOBAL RESET & BASE
-================================================== */
+/* ===================== RESET ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f7f9fc;
+  background: #f6f8fb;
   color: #1f2933;
   line-height: 1.85;
 }
 
-/* ==================================================
-   TYPOGRAPHY – BIG 4 STYLE
-================================================== */
+/* ===================== TYPOGRAPHY ===================== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #0b1c2d;
 }
 
-h1 {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-}
+h1 { font-size: 3rem; margin-bottom: 20px; }
+h2 { font-size: 2.3rem; margin-bottom: 16px; }
+h3 { font-size: 1.35rem; margin-bottom: 10px; }
 
-h2 {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-}
+p { margin-bottom: 16px; font-size: 1.05rem; }
 
-h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-  color: #2f3a45;
-}
-
-/* ==================================================
-   LAYOUT SYSTEM
-================================================== */
+/* ===================== LAYOUT ===================== */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -58,88 +35,61 @@ p {
 
 section {
   padding: 100px 0;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .section-divider {
   width: 90px;
   height: 3px;
   background: linear-gradient(90deg, #c9a24d, #e6c879);
-  margin: 25px 0 45px;
+  margin: 24px 0 40px;
 }
 
-/* ==================================================
-   HEADER & NAVIGATION (ALL PAGES)
-================================================== */
+/* ===================== HEADER ===================== */
 header {
   background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e3e8ef;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.nav-container {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
 }
 
-.logo img {
-  height: 48px;
-}
+.logo img { height: 46px; }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 0.95rem;
-  color: #0b1c2d;
   font-weight: 500;
-  position: relative;
+  color: #0b1c2d;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #c9a24d;
-  transition: width 0.3s ease;
+nav a:hover {
+  color: #c9a24d;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* ==================================================
-   HERO SECTION (FIXED OPACITY & ALIGNMENT)
-================================================== */
+/* ===================== HERO ===================== */
 .hero {
   background: linear-gradient(
-      rgba(11, 28, 45, 0.72),
-      rgba(11, 28, 45, 0.72)
-    ),
-    url("assets/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
+    rgba(11,28,45,0.75),
+    rgba(11,28,45,0.75)
+  );
   text-align: center;
-  padding: 180px 0;
+  padding: 160px 0;
 }
 
-.hero h1 {
-  color: #ffffff;
-  max-width: 900px;
-  margin: 0 auto 25px;
-}
-
+.hero h1 { color: #ffffff; }
 .hero p {
   color: #e5ebf1;
   max-width: 850px;
@@ -147,62 +97,48 @@ nav a:hover::after {
   font-size: 1.2rem;
 }
 
-.hero .btn {
-  margin-top: 40px;
+.btn {
   display: inline-block;
-  padding: 16px 46px;
-  background: linear-gradient(135deg, #c9a24d, #e6c879);
+  margin-top: 35px;
+  padding: 15px 44px;
+  background: linear-gradient(135deg,#c9a24d,#e6c879);
   color: #0b1c2d;
   font-weight: 600;
   text-decoration: none;
   border-radius: 4px;
 }
 
-/* ==================================================
-   SERVICES PAGE
-================================================== */
-.services-grid {
+/* ===================== GRIDS ===================== */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 40px;
 }
 
-.service-box {
+.card {
   background: #ffffff;
-  padding: 45px;
+  padding: 42px;
   border-top: 4px solid #c9a24d;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 
-/* ==================================================
-   LONG CONTENT PAGES (SERVICES / FOUNDER)
-================================================== */
-.content-page p {
+/* ===================== CONTENT PAGES ===================== */
+.content {
   max-width: 900px;
 }
 
-.content-page ul {
-  margin-top: 20px;
-  padding-left: 22px;
+.content ul {
+  margin-left: 20px;
 }
 
-.content-page li {
+.content li {
   margin-bottom: 10px;
 }
 
-/* ==================================================
-   CONTACT PAGE
-================================================== */
-.contact-info p {
-  font-size: 1.05rem;
-}
-
-/* ==================================================
-   FOOTER
-================================================== */
+/* ===================== FOOTER ===================== */
 footer {
   background: #0b1c2d;
-  padding: 60px 0;
+  padding: 55px 0;
   text-align: center;
 }
 
@@ -211,24 +147,9 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .hero {
-    padding: 140px 0;
-  }
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:768px) {
+  h1 { font-size: 2.3rem; }
+  section { padding: 80px 0; }
+  nav ul { flex-direction: column; gap: 14px; }
 }
