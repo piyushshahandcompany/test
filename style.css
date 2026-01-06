@@ -1,43 +1,54 @@
-/* -----------------------
+/* ===========================
    GLOBAL RESET
------------------------- */
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
-  background-color: #f5f7fa;
-  line-height: 1.7;
+html {
+  scroll-behavior: smooth;
 }
 
-/* -----------------------
-   TYPOGRAPHY
------------------------- */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.75;
+}
+
+/* ===========================
+   TYPOGRAPHY (LUXURY SCALE)
+=========================== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #0b1c2d;
+  letter-spacing: 0.5px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
 }
 
 p {
   font-size: 1.05rem;
+  color: #2b2b2b;
 }
 
-/* -----------------------
-   LAYOUT
------------------------- */
+/* ===========================
+   CONTAINER & SPACING
+=========================== */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -45,15 +56,25 @@ p {
 }
 
 section {
-  padding: 80px 0;
+  padding: 110px 0;
+  position: relative;
 }
 
-/* -----------------------
-   HEADER & NAVIGATION
------------------------- */
+/* Gold divider line */
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a24d, #e6c879);
+  margin: 25px 0 40px;
+}
+
+/* ===========================
+   HEADER / NAVIGATION
+=========================== */
 header {
   background: #0b1c2d;
-  padding: 20px 0;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar {
@@ -64,91 +85,107 @@ header {
 
 .logo {
   color: #c9a24d;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.3s;
+  position: relative;
 }
 
-nav a:hover {
-  color: #c9a24d;
+nav a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #c9a24d;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s;
 }
 
-/* -----------------------
-   HERO SECTION
------------------------- */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   HERO (EXECUTIVE FEEL)
+=========================== */
 .hero {
   background: linear-gradient(
-      rgba(11, 28, 45, 0.85),
-      rgba(11, 28, 45, 0.85)
-    ),
-    url('');
+      rgba(11, 28, 45, 0.88),
+      rgba(11, 28, 45, 0.88)
+    );
   color: #ffffff;
   text-align: center;
-  padding: 120px 0;
+  padding: 150px 0;
 }
 
 .hero h1 {
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .hero p {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  color: #e1e6eb;
 }
 
 .hero .btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 14px 34px;
-  background: #c9a24d;
+  margin-top: 45px;
+  padding: 15px 42px;
+  background: linear-gradient(135deg, #c9a24d, #e6c879);
   color: #0b1c2d;
-  text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
-/* -----------------------
-   SERVICES GRID
------------------------- */
+/* ===========================
+   SERVICES – PREMIUM GRID
+=========================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
 }
 
 .service-box {
   background: #ffffff;
-  padding: 35px;
-  border-left: 4px solid #c9a24d;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  padding: 45px 40px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+  border-top: 4px solid #c9a24d;
+  transition: transform 0.3s ease;
 }
 
-.service-box h3 {
-  margin-bottom: 10px;
+.service-box:hover {
+  transform: translateY(-6px);
 }
 
-/* -----------------------
-   FOOTER
------------------------- */
+.service-icon {
+  width: 42px;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   FOOTER – PRIVATE BANK STYLE
+=========================== */
 footer {
   background: #0b1c2d;
-  color: #ffffff;
-  padding: 40px 0;
+  padding: 55px 0;
   text-align: center;
 }
 
@@ -157,16 +194,20 @@ footer p {
   color: #cfd6dc;
 }
 
-/* -----------------------
+/* ===========================
    RESPONSIVE
------------------------- */
+=========================== */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
+  }
+
+  section {
+    padding: 80px 0;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
 }
