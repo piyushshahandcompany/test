@@ -1,54 +1,36 @@
-/* ===========================
+/* =====================
    GLOBAL RESET
-=========================== */
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f5f7fa;
-  color: #1a1a1a;
-  line-height: 1.75;
+  background: #f5f7fa;
+  color: #1f1f1f;
+  line-height: 1.8;
 }
 
-/* ===========================
-   TYPOGRAPHY (LUXURY SCALE)
-=========================== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #0b1c2d;
-  letter-spacing: 0.5px;
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.35rem;
-  margin-bottom: 12px;
-}
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; margin-bottom: 20px; }
+h3 { font-size: 1.4rem; margin-bottom: 12px; }
 
 p {
   font-size: 1.05rem;
-  color: #2b2b2b;
+  color: #333;
 }
 
-/* ===========================
-   CONTAINER & SPACING
-=========================== */
+/* =====================
+   CONTAINER & SECTIONS
+===================== */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -57,24 +39,21 @@ p {
 
 section {
   padding: 110px 0;
-  position: relative;
 }
 
-/* Gold divider line */
 .section-divider {
-  width: 80px;
+  width: 90px;
   height: 3px;
   background: linear-gradient(90deg, #c9a24d, #e6c879);
-  margin: 25px 0 40px;
+  margin: 25px 0 45px;
 }
 
-/* ===========================
-   HEADER / NAVIGATION
-=========================== */
+/* =====================
+   HEADER
+===================== */
 header {
   background: #0b1c2d;
   padding: 22px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar {
@@ -83,11 +62,8 @@ header {
   align-items: center;
 }
 
-.logo {
-  color: #c9a24d;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1.2px;
+.logo img {
+  height: 48px;
 }
 
 nav ul {
@@ -97,117 +73,82 @@ nav ul {
 }
 
 nav a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
-  position: relative;
 }
 
-nav a::after {
-  content: '';
-  width: 0;
-  height: 2px;
-  background: #c9a24d;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s;
+nav a:hover {
+  color: #c9a24d;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* ===========================
-   HERO (EXECUTIVE FEEL)
-=========================== */
+/* =====================
+   HERO
+===================== */
 .hero {
-  background: linear-gradient(
-      rgba(11, 28, 45, 0.88),
-      rgba(11, 28, 45, 0.88)
-    );
-  color: #ffffff;
+  background: linear-gradient(rgba(11,28,45,0.88), rgba(11,28,45,0.88));
+  color: #fff;
   text-align: center;
-  padding: 150px 0;
+  padding: 160px 0;
 }
 
 .hero h1 {
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 25px;
 }
 
 .hero p {
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
   font-size: 1.2rem;
-  color: #e1e6eb;
+  color: #e2e6eb;
 }
 
 .hero .btn {
-  display: inline-block;
   margin-top: 45px;
-  padding: 15px 42px;
+  display: inline-block;
+  padding: 16px 46px;
   background: linear-gradient(135deg, #c9a24d, #e6c879);
   color: #0b1c2d;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 3px;
 }
 
-/* ===========================
-   SERVICES – PREMIUM GRID
-=========================== */
+/* =====================
+   SERVICES GRID
+===================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
 .service-box {
-  background: #ffffff;
-  padding: 45px 40px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+  background: #fff;
+  padding: 45px;
   border-top: 4px solid #c9a24d;
-  transition: transform 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 
-.service-box:hover {
-  transform: translateY(-6px);
-}
-
-.service-icon {
-  width: 42px;
-  margin-bottom: 18px;
-}
-
-/* ===========================
-   FOOTER – PRIVATE BANK STYLE
-=========================== */
+/* =====================
+   FOOTER
+===================== */
 footer {
   background: #0b1c2d;
-  padding: 55px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
 footer p {
-  font-size: 0.9rem;
   color: #cfd6dc;
+  font-size: 0.9rem;
 }
 
-/* ===========================
+/* =====================
    RESPONSIVE
-=========================== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 14px;
-  }
+===================== */
+@media(max-width:768px){
+  h1{font-size:2.4rem;}
+  section{padding:80px 0;}
+  nav ul{flex-direction:column;}
 }
