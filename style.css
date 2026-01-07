@@ -1,155 +1,113 @@
-/* ===================== RESET ===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-html { scroll-behavior: smooth; }
+  <!-- Primary SEO -->
+  <title>Chartered Accountant in Mumbai | Piyush Shah and Company</title>
+  <meta name="description" content="Piyush Shah and Company is a reputed Chartered Accountant firm in Masjid Bunder, Mumbai with 25+ years of experience serving clients across Maharashtra and India.">
+  <meta name="keywords" content="CA in Masjid Bunder, CA in Mumbai, Chartered Accountant in Maharashtra, CA in India, Piyush Shah CA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://piyushshahandcompany.com/">
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f6f8fb;
-  color: #1f2933;
-  line-height: 1.85;
-}
+  <!-- Geo SEO -->
+  <meta name="geo.region" content="IN-MH">
+  <meta name="geo.placename" content="Mumbai">
+  <meta name="geo.position" content="18.9633;72.8354">
+  <meta name="ICBM" content="18.9633, 72.8354">
 
-/* ===================== TYPOGRAPHY ===================== */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #0b1c2d;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Piyush Shah and Company | Chartered Accountant in Mumbai">
+  <meta property="og:description" content="25+ years trusted CA firm in Masjid Bunder, Mumbai offering tax, audit, accounting and compliance services across India.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piyushshahandcompany.com/">
 
-h1 { font-size: 3rem; margin-bottom: 20px; }
-h2 { font-size: 2.3rem; margin-bottom: 16px; }
-h3 { font-size: 1.35rem; margin-bottom: 10px; }
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-p { margin-bottom: 16px; font-size: 1.05rem; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-/* ===================== LAYOUT ===================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
 
-section {
-  padding: 100px 0;
-  background: #ffffff;
-}
+  <!-- SCHEMA: ORGANIZATION + LOCAL BUSINESS + ACCOUNTING SERVICE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Piyush Shah and Company",
+    "url": "https://piyushshahandcompany.com",
+    "logo": "https://piyushshahandcompany.com/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Piyush Shah",
+      "jobTitle": "Chartered Accountant"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Masjid Bunder",
+      "addressRegion": "Mumbai, Maharashtra",
+      "addressCountry": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9892370925",
+      "contactType": "customer service"
+    },
+    "areaServed": ["Mumbai", "Maharashtra", "India"]
+  }
+  </script>
 
-.section-divider {
-  width: 90px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9a24d, #e6c879);
-  margin: 24px 0 40px;
-}
+</head>
 
-/* ===================== HEADER ===================== */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e3e8ef;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+<body>
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-}
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <img src="logo.png" alt="Piyush Shah and Company Chartered Accountants">
+      <div class="logo-text">
+        <strong>Piyush Shah and Company</strong>
+        <span>Chartered Accountants</span>
+      </div>
+    </div>
 
-.logo img { height: 46px; }
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="founder.html">Founder</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
+<!-- HERO -->
+<section class="hero fade-in">
+  <div class="container">
+    <h1>Leading Chartered Accountant in Mumbai with 25+ Years of Experience</h1>
+    <p>
+      Piyush Shah and Company is a professionally managed Chartered Accountant firm
+      based in Masjid Bunder, Mumbai, delivering expert taxation, audit, accounting,
+      and compliance services across Maharashtra and India.
+    </p>
 
-nav a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #0b1c2d;
-}
+    <div class="hero-actions">
+      <a href="services.html" class="btn primary">Explore Our Services</a>
+      <a href="contact.html" class="btn outline">Schedule Consultation</a>
+    </div>
+  </div>
+</section>
 
-nav a:hover {
-  color: #c9a24d;
-}
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919892370925" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  WhatsApp
+</a>
 
-/* ===================== HERO ===================== */
-.hero {
-  background: linear-gradient(
-    rgba(11,28,45,0.75),
-    rgba(11,28,45,0.75)
-  );
-  text-align: center;
-  padding: 160px 0;
-}
-
-.hero h1 { color: #ffffff; }
-.hero p {
-  color: #e5ebf1;
-  max-width: 850px;
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 35px;
-  padding: 15px 44px;
-  background: linear-gradient(135deg,#c9a24d,#e6c879);
-  color: #0b1c2d;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-/* ===================== GRIDS ===================== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 40px;
-}
-
-.card {
-  background: #ffffff;
-  padding: 42px;
-  border-top: 4px solid #c9a24d;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-}
-
-/* ===================== CONTENT ===================== */
-.content {
-  max-width: 900px;
-}
-
-.content ul {
-  margin-left: 20px;
-}
-
-.content li {
-  margin-bottom: 10px;
-}
-
-/* ===================== FOOTER ===================== */
-footer {
-  background: #0b1c2d;
-  padding: 55px 0;
-  text-align: center;
-}
-
-footer p {
-  color: #cfd6dc;
-  font-size: 0.9rem;
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width:768px) {
-  h1 { font-size: 2.3rem; }
-  section { padding: 80px 0; }
-  nav ul { flex-direction: column; gap: 14px; }
-}
+</body>
+</html>
