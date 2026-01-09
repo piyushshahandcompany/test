@@ -72,6 +72,32 @@ a {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--navy);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  #nav-toggle:checked + .hamburger + .main-nav {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
 /* ======================================================
    HEADER (PREMIUM)
 ====================================================== */
