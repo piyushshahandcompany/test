@@ -139,3 +139,13 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
