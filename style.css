@@ -58,6 +58,20 @@ a {
   max-width: 900px;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 24px;
+  background: var(--gold);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
 /* ======================================================
    HEADER (PREMIUM)
 ====================================================== */
