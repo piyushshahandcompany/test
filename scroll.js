@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".reveal");
+  const reveals = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add("active");
       }
     });
-  }, { threshold: 0.15 });
+  };
 
-  elements.forEach(el => observer.observe(el));
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // run once on load
 });
