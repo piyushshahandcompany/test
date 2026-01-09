@@ -355,3 +355,11 @@ section {
   .hero-actions { flex-direction: column; }
   .card { grid-template-columns: 1fr; }
 }
+.contact-card svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
