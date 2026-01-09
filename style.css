@@ -173,15 +173,17 @@ a {
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  background: var(--gold);
   color: #111827;
-  box-shadow: 0 10px 30px rgba(201,162,77,0.35);
+  border: 1px solid var(--gold);
+  transition: all 0.35s ease;
 }
 
 .btn.primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(201,162,77,0.6);
+  background: var(--gold-soft);
+  transform: translateY(-2px);
 }
+
 
 .btn.outline {
   border: 1px solid rgba(255,255,255,0.4);
